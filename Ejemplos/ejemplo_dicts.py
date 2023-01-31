@@ -3,9 +3,9 @@ Ejemplos de uso de diccionarios
 """
 # Crear un nuevo dict
 dict_ejemplo = {
-    "autor": "Miguel de Cervantes",
-    "titulo": "El ingenioso hidalgo don Quijote de la Mancha",
-    "anno": 1605
+    "autor": "J.K Rowling",
+    "titulo": "Harry Potter",
+    "anno": 1993
 }
 print(dict_ejemplo)
 
