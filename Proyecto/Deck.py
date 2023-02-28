@@ -1,4 +1,4 @@
-import Card as c
+import Card as C
 import random
 
 SUITS = ('\u2764', '\u2666', '\u2660', '\u2618')
@@ -13,7 +13,7 @@ class Deck:
         for suit in SUITS:
             for rank in RANKS:
                 # crea una nueva carta y la agrega a la lista
-                self.deck.append(c.Card(suit, rank))
+                self.deck.append(C.Card(suit, rank))
 
     # mezcla la baraja
     def shuffle(self):

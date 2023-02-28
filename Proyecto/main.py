@@ -1,20 +1,17 @@
-import Deck as D
-import Hand as H
+import Game as G
+import utils
 
-deck = D.Deck()
-deck.shuffle()
 
-# crear manos (listas) vacías de jugador y casa
-playerhand = H.Hand('Jugador 1')
-dealerhand = H.Hand('Dealer')
-# reparte dos cartas al jugador
-playerhand.add_new_card(deck.deal())
-playerhand.add_new_card(deck.deal())
-playerhand.print_hand()
-print(playerhand.value)
-print('===============================>')
-# reparte dos cartas a la casa
-dealerhand.add_new_card(deck.deal())
-dealerhand.add_new_card(deck.deal())
-dealerhand.print_hand(True)
-print(dealerhand.value)
+def main():
+    game = G.Game(['test1', 'test2'])
+    game.print_curr_state()
+    cont = input('Digite 1 para continuar: ')
+    while cont != '1':
+        input('Digite 1 para continuar')
+    utils.deal_to_players(game.playerhands, game.deck)
+    game.print_curr_state()
+    utils.deal_to_dealer(game.dealerhand, game.deck)
+    game.print_curr_state()
+
+
+main()
