@@ -1,6 +1,5 @@
 import Deck
 import Hand as H
-import utils
 
 deck = Deck.Deck()
 deck.shuffle()
