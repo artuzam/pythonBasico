@@ -1,7 +1,7 @@
-import Deck
+import Deck as D
 import Hand as H
 
-deck = Deck.Deck()
+deck = D.Deck()
 deck.shuffle()
 
 # crear manos (listas) vacías de jugador y casa
