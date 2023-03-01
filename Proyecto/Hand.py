@@ -17,7 +17,7 @@ class Hand:
                 print(self.cardlist[i])
         showvalue = 'X' if isdealer else self.value
         print(f'El valor actual de la mano es: {showvalue}')
-        print('**--------------**--------------**\n')
+        print('**--------------*X*--------------**\n')
 
     def add_new_card(self, card):
         self.cardlist.append(card)
