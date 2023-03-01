@@ -9,12 +9,15 @@ class Hand:
         self.value = 0
 
     def print_hand(self, isdealer=False):
-        print(f'La mano de {self.playername} es:\n')
+        print(f'La mano de {self.playername} es:')
         for i in range(0, len(self.cardlist)):
             if isdealer and i == 0:
                 print('X X')
             else:
-                print(self.cardlist[i].__str__())
+                print(self.cardlist[i])
+        showvalue = 'X' if isdealer else self.value
+        print(f'El valor actual de la mano es: {showvalue}')
+        print('**--------------**--------------**\n')
 
     def add_new_card(self, card):
         self.cardlist.append(card)
