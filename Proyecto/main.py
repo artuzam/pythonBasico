@@ -7,7 +7,7 @@ import os
 
 def main():
     username = utils.handle_user_select()
-    game = G.Game([username])
+    game = G.Game([username, "PLY 2"])
     game.print_curr_state()
     # Dialogo de continuar
     cont = input('Desea continuar? (Y): ')
@@ -30,7 +30,7 @@ def main():
     game.print_final_state()
     game.winner = utils.declare_winner(game)
     print(f'El ganador es {game.winner.upper()}')
-    fh.add_user_stat(username, f'Gano {game.winner}')
+    fh.add_user_stat(username, f'Gano')
 
 
 main()

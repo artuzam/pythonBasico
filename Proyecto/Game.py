@@ -29,12 +29,13 @@ class Game:
 
     def print_curr_state(self):
         print('ESTADO DE LA PARTIDA')
+        # imprime la mano del dealer
         self.dealerhand.print_hand(True)
         for hand in self.playerhands:
             hand.print_hand()
 
     def print_final_state(self):
         print('ESTADO FINAL DE LA PARTIDA')
-        self.dealerhand.print_hand(False)
+        self.dealerhand.print_hand()
         for hand in self.playerhands:
             hand.print_hand()
