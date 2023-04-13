@@ -1,35 +1,36 @@
 """
 Ejemplos de uso de diccionarios
 """
+autores = ["Pedro Picapiedra", "Pablo Mármol"]
 # Crear un nuevo dict
-dict_ejemplo = {
-    "autor": "J.K Rowling",
-    "titulo": "Harry Potter",
-    "anno": 1993
+libro = {
+    "autor": autores,
+    "titulo": "Los picapiedra",
+    "anno": -10000
 }
-print(dict_ejemplo)
+# print(libro)
 
 # Acceder al valor de una llave
-print(dict_ejemplo["titulo"])
+# print(libro["titulo"])
 
 # Averiguar las llaves de un dict
-print(dict_ejemplo.keys())
+# print(libro.keys())
 
-dict_ejemplo["genero"] = "Novela"
-print(dict_ejemplo.keys())
+# libro["genero"] = "Novela"
+# print(libro.keys())
 
-# Averiguar los valores de un dict
-print(dict_ejemplo.values())
+# # Averiguar los valores de un dict
+# print(libro.values())
 
-# Averiguar los items de un dict
-print(dict_ejemplo.items())
+# # Averiguar los items de un dict
+# print(libro.items())
 
-# Cambiar un valor
-dict_ejemplo["genero"] = "fantasia"
-print(dict_ejemplo)
-dict_ejemplo.update("genero", "novela")
-print(dict_ejemplo)
+# # Cambiar un valor
+libro["genero"] = "fantasia"
+print(libro)
+# libro.update({"genero": "epica"})
+# print(libro)
 
 # Eliminar un elemento
-dict_ejemplo.pop("genero")
-print(dict_ejemplo)
+libro.pop("genero")
+print(libro)

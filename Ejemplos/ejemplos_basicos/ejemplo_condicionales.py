@@ -1,19 +1,19 @@
-a = 142
-b = 5000
+a = 14200
+b = 50000
 c = 666
 
-if a == b:
-  print("A es igual a B")
-elif a < b:
-  print("A es menor que B")
-elif a <= b:
-  print("A es menor o igual que B")
-elif a > b:
-  print("A es mayor que B")
-elif a >= b:
-  print("A es mayor o igual que B")
-else:
-  print("Caí en la opción por defecto")
+# if a == b:
+#   print("A es igual a B")
+# elif a <= b:
+#   print("A es menor o igual que B")
+# elif a < b:
+#   print("A es menor que B")
+# elif a > b:
+#   print("A es mayor que B")
+# elif a >= b:
+#   print("A es mayor o igual que B")
+# else:
+#   print("Caí en la opción por defecto")
 
 if b > a and b < c:
   print("B está entre A y C")
