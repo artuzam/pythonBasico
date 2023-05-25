@@ -52,4 +52,4 @@ capitan = Dachshund("Capitán", 9)
 # capitan.speak()
 
 # capitan.sleep()
-pasi.sleep()
+# pasi.sleep()

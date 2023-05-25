@@ -1,17 +1,17 @@
 # ejemplos funciones como parámetros o como valor de retorno
 # función como parámetro
-def inner():
-    print("Soy la funcion inner")
+# def inner():
+#     print("Soy la funcion inner")
 
 
-def outer(function):
-    function()
+# def outer(f):
+#     f()
 
 
 # outer(inner)
 
 # ejemplo de función como parámetro con sorted()
-animales = ['perro', 'gato', 'paloma']
+animales = ["perro", "gato", "paloma"]
 # print(sorted(animales))
 # print(sorted(animales, key=len))
 
@@ -28,6 +28,7 @@ def reverse_len(s):
 def outer():
     def inner():
         print("I am function inner")
+
     return inner
 
 
@@ -42,24 +43,24 @@ function = outer()
 def reverse(s):
     return s[::-1]
 
-# print(reverse('Hola'))
+
+# print(reverse("Hola"))
 
 
-def reverselambda(s): return s[::-1]
-# print(reverselambda('Hola'))
+# print(lambda s: s[::-1]("Hola"))
 
 #  otro ejemplo de lambda
-# print((lambda a, b, c: (a+b+c)/3)(1,2,3))
+# print((lambda a, b, c: (a + b + c) / 3)(1, 2, 3))
 
 
 # ejemplo de lambda con sorted()
-animales = ['perro', 'gato', 'paloma']
+animales = ["perro", "gato", "paloma"]
 # print(sorted(animales, key=lambda s: -len(s)))
 
 
 # ejemplos de map()
 # reverse a todas las strings de una lista con map()
-animales = ['perro', 'gato', 'paloma']
+animales = ["perro", "gato", "paloma"]
 iterator = map(reverse, animales)
 # for i in iterator:
 #     print(i)
@@ -69,25 +70,32 @@ iterator = map(reverse, animales)
 # print(list(map(lambda s: s[::-1], animales)))
 
 # map con múltiples iterables
-# print(list(map(lambda a, b, c: a+b+c,
-#   [1, 2, 3], [10, 20, 30], [100, 200, 300])))
+# print(list(map(lambda a, b, c: a + b + c,
+#                [1, 2, 3],
+#                [10, 20, 30],
+#                [100, 200, 300])))
 
 # ejemplos de filter
 # filter con función normal (def)
 numberlist = [1, 111, 2, 222, 3, 333]
 
 
-def mayorque_100(x):
+def mayor_que_100(x):
     return x > 100
 
 
-# print(list(filter(mayorque_100, numberlist)))
+# print(list(filter(mayor_que_100, numberlist)))
 
+data = [
+    {"nombre": "Tabcin", "precio": 1550},
+    {"nombre": "Tabcin", "precio": 2000},
+    {"nombre": "AlkaSeltzer", "precio": 3550},
+]
 # filter con lambda
-# print(list(filter(lambda x: x > 100, numberlist)))
+# print(list(filter(lambda x: x["nombre"] == "Tabcin", data)))
 
 # ejemplo de filter con funciones nativas y def
-animales = ['perro', 'PERRO', 'gato', 'GATO', 'paloma', 'PALOMA']
+animales = ["perro", "PERRO", "gato", "GATO", "paloma", "PALOMA"]
 
 
 def all_caps(s):
@@ -97,4 +105,4 @@ def all_caps(s):
 # print(list(filter(all_caps, animales)))
 
 # ejemplo de filter con funciones nativas y lambda
-# print(list(filter(lambda s: s.isupper(), animales)))
+print(list(filter(lambda s: s.isupper(), animales)))

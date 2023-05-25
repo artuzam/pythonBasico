@@ -1,23 +1,42 @@
-import modulo_arit as ma
+import os
+import arit
 
-print(ma.suma(2, 2))
-print(ma.resta(4, 2))
-print(ma.API_URL)
+a = 1
+b = 2
 
-print(dir(ma))
+arit.imprimir_numeros(a, b)
+res = arit.sumar_numeros(a, 10)
+print(res)
+print(arit.API_URL)
 
+
+file = open("demofile.txt", "a")
+file.write("Texto de prueba")
+file.close()
+
+file = open("demofile.txt", "w")
+file.write("Write sobreescribe \n")
+file.write("Write sobreescribe \n")
+file.write("Write sobreescribe \n")
+file.write("Write sobreescribe \n")
+file.write("Write sobreescribe \n")
+file.close()
 
 file = open("demofile.txt")
+# print(file.read())
 
-# for line in file:
-#   print(line)
+for line in file:
+  print(line)
 
+file.close()
 # file2 = open("demofile2.txt", "a")
 
 # file2.write("Hola archivo \n")
 
-# if (os.path.exists("demofile.txt")) == False:
-#   file3 = open("demofile.txt", "x")
+if (os.path.exists("demofile.txt")) == False:
+  file3 = open("demofile.txt", "x")
+else: 
+  file3 = open("demofile.txt")
 
-file.close()
+# file.close()
 # file2.close()
